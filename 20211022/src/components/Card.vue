@@ -7,8 +7,9 @@
       </div>
       <h4>{{ data.title }}</h4>
     </div>
-    <div class="right flex justify-center items-center">
-      <ul class="flex justify-center items-center" v-show="show">
+
+    <div class="right flex justify-evenly items-center">
+      <ul class="flex justify-evenly items-center" v-show="show">
         <li v-for="(item, index) in data.content" :key="index">
           <img :src="item.pic" :alt="item.title" />
           <p>{{ item.title }}</p>
@@ -50,6 +51,7 @@ const w = computed(() => (props.show ? '650px' : '0'))
     width: 130px;
     position: relative;
     background-color: white;
+
     .icon {
       width: 35px;
       height: 35px;
@@ -84,23 +86,29 @@ const w = computed(() => (props.show ? '650px' : '0'))
   }
   .right {
     width: v-bind('w');
+    // width: 650px;
     height: 460px;
     background-color: white;
     box-shadow: 15px 0px 35px rgb(0 0 0 / 20%);
-    transition: all 0.12s linear;
     overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.34, 0.1, 0.855, 0.06);
 
     ul {
+      height: 100%;
       list-style: none;
-      padding: 0;
+      padding: 15px;
       margin: 0;
       flex-wrap: wrap;
+      flex-direction: row;
+      box-sizing: border-box;
       li {
         width: 285px;
         height: 125px;
         position: relative;
-        margin: 10px;
+        // margin: 10px;
         box-shadow: 0px 0px 4px #ccc;
+        box-sizing: border-box;
+
         img {
           position: absolute;
           z-index: 1;

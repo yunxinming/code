@@ -1,8 +1,12 @@
 <template>
+  <div class="nav">
+    <a href="/">PC</a>
+    <a href="/wap">移动端</a>
+  </div>
   <div class="container flex justify-between">
     <template v-for="(item, index) in data" :key="index">
-      <div @mouseover="handleClick(index)">
-        <Card :data="item" :show="index == showIndex"></Card>
+      <div @mouseover="handle(index)">
+        <Card :data="item" :show="showIndex == index"></Card>
       </div>
     </template>
   </div>
@@ -26,8 +30,20 @@ GetData('1').then((result) => {
 
 const showIndex = ref(0)
 
-function handleClick(index: number) {
+function handle(index: number) {
   showIndex.value = index
+}
+
+function delay(fun: Function, awit: number) {
+  let timer: number | null
+  return function (value: number) {
+    if (!timer) {
+      timer = setTimeout(function () {
+        fun(value)
+        timer = null
+      }, awit)
+    }
+  }
 }
 </script>
 
@@ -35,6 +51,22 @@ function handleClick(index: number) {
 .container {
   width: 1200px;
   margin: 0 auto;
-  transition: all 0.3 linear;
+  overflow: hidden;
+}
+
+.nav {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+  a {
+    color: #333;
+    margin-left: 10px;
+    font-family: '微软雅黑';
+    &:hover {
+      color: red;
+    }
+  }
 }
 </style>
