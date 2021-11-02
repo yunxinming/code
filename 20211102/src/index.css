@@ -1,0 +1,429 @@
+html,
+body {
+  margin: 0;
+}
+.app {
+  position: relative;
+}
+.app header {
+  height: 434px;
+}
+
+.app header img {
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 81%);
+}
+
+.app header div h1 {
+  font-family: PingFangSC-Semibold;
+  font-size: 48px;
+  color: #333333;
+  letter-spacing: 0.38px;
+  margin: 0;
+  position: absolute;
+  top: 383px;
+  left: 30px;
+}
+
+.app header div span {
+  opacity: 0.5;
+  font-family: PingFangSC-Light;
+  font-size: 24px;
+  color: #005842;
+  letter-spacing: 0.19px;
+  line-height: 24px;
+  position: absolute;
+  right: 30px;
+  top: 408px;
+}
+
+.container {
+  margin: 30px 30px 40px 30px;
+}
+
+.container .search {
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0 0 30px 0 rgba(0, 88, 66, 0.14);
+  border-radius: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .search img {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container .search input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  position: absolute;
+  left: 82px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  opacity: 0.8;
+  font-family: PingFangSC-Light;
+  font-size: 24px;
+  color: #15624f;
+  letter-spacing: 0.19px;
+}
+
+.container .search input::placeholder {
+  opacity: 0.8;
+  font-family: PingFangSC-Light;
+  font-size: 24px;
+  color: #15624f;
+  letter-spacing: 0.19px;
+  line-height: 24px;
+}
+
+.container .serve {
+  margin: 80px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .serve .card {
+  width: 150px;
+  height: 200px;
+  background-image: linear-gradient(180deg, #ceede4 0%, #e8f3f0 100%);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .serve .card .icon {
+  width: 90px;
+  height: 80px;
+}
+
+.container .serve .card h5 {
+  margin: 0;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #005842;
+  letter-spacing: 0.19px;
+}
+
+.container .swiper {
+  height: 330px;
+  background-image: linear-gradient(269deg, rgba(255, 255, 255, 0) 0%, rgba(9, 104, 80, 0.34) 27%, #045742 100%);
+  border-radius: 12px;
+  position: relative;
+}
+
+.container .swiper img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.container .swiper .mySwiper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.container .swiper .mySwiper .swiper-pagination {
+  width: 80%;
+  text-align: start;
+  margin-left: 50px;
+  bottom: 44px;
+}
+/* swiper-pagination-bullet swiper-pagination-bullet-active */
+.container .swiper .mySwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+}
+.container .swiper .mySwiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 24px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.swiper-slide h1,
+.swiper-slide h2 {
+  font-family: PingFangSC-Semibold;
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.swiper-slide h1 {
+  font-size: 46px;
+  letter-spacing: 0.36px;
+  line-height: 46px;
+  margin-top: 108px;
+}
+
+.swiper-slide h2 {
+  font-size: calc(21px / 2);
+  letter-spacing: 0.16px;
+}
+
+.container .itinerary {
+  margin-top: 80px;
+}
+
+.container .itinerary h1 {
+  font-family: PingFangSC-Semibold;
+  font-size: 36px;
+  color: #333333;
+  letter-spacing: 0.28px;
+  line-height: 36px;
+  margin: 0 0 30px 0;
+}
+
+.container .itinerary .ticket {
+  height: 330px;
+  background: #ffffff;
+  box-shadow: 0 0 30px 0 rgba(0, 88, 66, 0.14);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+.container .itinerary .ticket::before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: #005842;
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .itinerary .ticket .title {
+  height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .itinerary .ticket .title .left {
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.19px;
+}
+
+.container .itinerary .ticket .title .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.19px;
+}
+
+.container .itinerary .ticket .title .right img {
+  width: 24px;
+  height: 24px;
+  font-family: PingFangSC-Medium;
+  margin-right: 10px;
+}
+
+.container .itinerary .ticket .line {
+  height: 1px;
+  opacity: 0.3;
+  border-bottom: 1px dotted #196955;
+}
+
+.container .itinerary .ticket .info {
+  height: 142px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .itinerary .ticket .info .left h1,
+.container .itinerary .ticket .info .right h1 {
+  font-family: PingFangSC-Semibold;
+  font-size: 46px;
+  color: #196955;
+  letter-spacing: 0.36px;
+  line-height: 46px;
+  margin: 0;
+}
+.container .itinerary .ticket .info .left h2,
+.container .itinerary .ticket .info .right h2 {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.19px;
+  margin: 0;
+}
+
+.container .itinerary .ticket .info .center {
+  width: 38px;
+}
+.container .itinerary .ticket .info .center img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .itinerary .ticket .dengji-info {
+  height: 93px;
+  /* margin: 30px 0; */
+  display: flex;
+  justify-content: space-between;
+}
+.container .itinerary .ticket .dengji-info p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  font-family: PingFangSC-Light;
+  font-size: 24px;
+  color: #666666;
+  letter-spacing: 0.19px;
+}
+.container .itinerary .ticket .dengji-info p span {
+  font-family: PingFangSC-Semibold;
+  font-size: 28px;
+  color: #333333;
+  letter-spacing: 0.22px;
+  line-height: 28px;
+  margin-left: 10px;
+}
+
+.container .tabs {
+  margin-top: 80px;
+}
+
+.container .tabs .title ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .tabs .title ul li {
+  display: flex;
+  align-items: center;
+  color: #015843;
+}
+.container .tabs .title ul li:nth-child(1) {
+  font-family: PingFangSC-Semibold;
+  font-size: 28px;
+  letter-spacing: 0.22px;
+  line-height: 28px;
+}
+
+.container .tabs .title ul li:nth-child(1) span {
+  width: 200px;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0 0 30px 0 rgba(0, 88, 66, 0.14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 12px 0px 0px;
+  overflow: hidden;
+}
+
+.container .tabs .title ul li:nth-child(1) span:nth-child(2) {
+  font-family: PingFangSC-Semibold;
+  color: #015843;
+  background: #fff;
+}
+.container .tabs .title ul li:nth-child(2) span {
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #005842;
+  letter-spacing: 0.22px;
+  line-height: 28px;
+}
+
+.container .tabs .title ul li:nth-child(2) div {
+  width: 26px;
+  height: 26px;
+  background-image: linear-gradient(180deg, #ceede4 0%, #e8f3f0 100%);
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+}
+.container .tabs .title ul li:nth-child(2) div img {
+  width: 10px;
+  height: 10px;
+}
+.container .tabs .card {
+  min-height: 260px;
+  background: #ffffff;
+  box-shadow: 0 0 30px 0 rgba(0, 88, 66, 0.14);
+  border-radius: 0 12px 12px 12px;
+}
+
+.container .tabs .card ul {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-end;
+  align-items: center;
+}
+.container .tabs .card ul li {
+  width: 230px;
+  height: 143px;
+  opacity: 0.5;
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .recreation {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.container .recreation h1 {
+  font-family: PingFangSC-Semibold;
+  font-size: 36px;
+  color: #333333;
+  letter-spacing: 0.28px;
+  line-height: 36px;
+  margin: 0 0 30px 0;
+}
+.container .recreation .img {
+  display: flex;
+  overflow-x: scroll;
+}
+.container .recreation .img img {
+  width: 400px;
+  height: 200px;
+  border: 0;
+  margin-right: 30px;
+}
+
+.container .tabs .title ul li:nth-child(1) .active {
+  background: #005842 !important;
+  color: white !important;
+  box-shadow: 0 0 30px 0 rgba(0, 88, 66, 0.24);
+}
